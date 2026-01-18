@@ -28,14 +28,14 @@ kiket bundle install business-operations
 1. Navigate to **Marketplace → Bundles**
 2. Search for "Business Operations"
 3. Click **Install**
-4. Configure required integrations (Slack, Email)
+4. Configure Email integration (Slack optional)
 5. Optionally import sample data
 
 ## Requirements
 
 - **Minimum Plan:** Starter
-- **Required Extensions:** Email, Slack
-- **Optional Extensions:** GitHub, Teams, Time Tracking, Calendar, Zoom
+- **Required Extensions:** Email
+- **Optional Extensions:** Slack, GitHub, Teams, Time Tracking, Calendar, Zoom
 
 ## Features
 

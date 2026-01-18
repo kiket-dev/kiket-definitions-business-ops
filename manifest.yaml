@@ -69,8 +69,6 @@ bundle:
       required:
         - id: email
           description: Email notifications, CSAT surveys, customer responses
-        - id: slack
-          description: Team notifications, incident alerts, approval requests
       optional:
         - id: github
           description: Engineering integration (PR tracking, branch creation)
@@ -82,6 +80,8 @@ bundle:
           description: Demo scheduling and meeting booking
         - id: zoom
           description: Video call integration for demos
+        - id: slack
+          description: Team notifications, incident alerts, approval requests
 
   setup:
     projects:
