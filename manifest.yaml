@@ -1,0 +1,146 @@
+bundle:
+  name: business-operations
+  version: 1.0.0
+  title: "Kiket Business Operations Pack"
+  description: |
+    Complete business operations suite used by Kiket to run the company.
+    Includes workflows, templates, and automations for:
+    - Customer Support (ticket management, SLA tracking, CSAT surveys)
+    - Sales Pipeline (lead capture, qualification, deal tracking)
+    - Marketing Operations (campaign management, content production)
+    - Partner Management (applications, onboarding, certification)
+    - Product Development (feature lifecycle, roadmap planning)
+    - Finance & Administration (expense approval, invoice processing)
+    - Legal & Compliance (GDPR requests, contract management)
+    - Engineering Operations (bug tracking, incident response, releases)
+
+  author: Kiket
+  license: MIT
+  homepage: https://github.com/kiket-dev/kiket-definitions-business-ops
+  documentation: https://docs.kiket.dev/bundles/business-ops
+
+  tags:
+    - business
+    - operations
+    - startup
+    - saas
+    - dogfooding
+    - complete-suite
+
+  pricing:
+    type: free
+    min_plan: starter
+
+  contents:
+    definitions:
+      - repo: kiket-dev/kiket-definitions-support
+        path: support
+        description: Customer support ticket management with AI triage
+
+      - repo: kiket-dev/kiket-definitions-sales
+        path: sales
+        description: Sales pipeline with lead scoring and deal tracking
+
+      - repo: kiket-dev/kiket-definitions-marketing
+        path: marketing
+        description: Marketing campaign and content workflows
+
+      - repo: kiket-dev/kiket-definitions-partners
+        path: partners
+        description: Partner application and certification management
+
+      - repo: kiket-dev/kiket-definitions-product
+        path: product
+        description: Product development and feature lifecycle
+
+      - repo: kiket-dev/kiket-definitions-finance
+        path: finance
+        description: Expense approval and invoice processing
+
+      - repo: kiket-dev/kiket-definitions-legal
+        path: legal
+        description: GDPR compliance and contract management
+
+      - repo: kiket-dev/kiket-definitions-engineering
+        path: engineering
+        description: Bug tracking, incidents, and release management
+
+    extensions:
+      required:
+        - id: email
+          description: Email notifications, CSAT surveys, customer responses
+        - id: slack
+          description: Team notifications, incident alerts, approval requests
+      optional:
+        - id: github
+          description: Engineering integration (PR tracking, branch creation)
+        - id: teams
+          description: MS Teams notifications (alternative to Slack)
+        - id: time-tracking
+          description: Time logging and capacity planning
+        - id: google-calendar
+          description: Demo scheduling and meeting booking
+        - id: zoom
+          description: Video call integration for demos
+
+  setup:
+    projects:
+      - key: SUPPORT
+        name: Customer Support
+        definition: support
+        description: Manage customer tickets and support requests
+
+      - key: SALES
+        name: Sales Pipeline
+        definition: sales
+        description: Track leads, opportunities, and deals
+
+      - key: MARKETING
+        name: Marketing Operations
+        definition: marketing
+        description: Manage campaigns and content production
+
+      - key: PARTNERS
+        name: Partner Program
+        definition: partners
+        description: Partner applications and certifications
+
+      - key: PRODUCT
+        name: Product Development
+        definition: product
+        description: Feature planning and roadmap management
+
+      - key: FINANCE
+        name: Finance & Admin
+        definition: finance
+        description: Expense approvals and invoicing
+
+      - key: LEGAL
+        name: Legal & Compliance
+        definition: legal
+        description: GDPR requests and contract management
+
+      - key: ENG
+        name: Engineering
+        definition: engineering
+        description: Bug tracking, incidents, and releases
+
+    post_install:
+      - action: configure_integrations
+        prompt: true
+        message: "Configure your Slack and Email integrations for notifications"
+      - action: import_sample_data
+        optional: true
+        message: "Import sample data to explore the workflows"
+
+  screenshots:
+    - path: screenshots/support-board.png
+      caption: "Customer support queue with SLA tracking"
+    - path: screenshots/sales-pipeline.png
+      caption: "Visual sales pipeline with AI lead scoring"
+    - path: screenshots/executive-dashboard.png
+      caption: "Executive dashboard with cross-functional metrics"
+    - path: screenshots/marketing-campaigns.png
+      caption: "Marketing campaign management board"
+    - path: screenshots/engineering-bugs.png
+      caption: "Engineering bug triage with AI categorization"
