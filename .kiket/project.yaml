@@ -1,0 +1,78 @@
+model_version: "1.0"
+project:
+  key: BIZOPS
+  name: Business Operations
+  version: 1.0.0
+  description: Cross-functional business operations hub coordinating support, sales, marketing, engineering, and administrative workflows.
+
+  team:
+    roles:
+      - name: ops_lead
+        description: Operations lead coordinating cross-functional initiatives
+      - name: admin
+        description: Administrative coordinator handling day-to-day operations
+      - name: executive
+        description: Executive sponsor providing strategic oversight
+
+  extensions:
+    required:
+      - email
+    optional:
+      - slack
+      - github
+
+  seed_data:
+    issues:
+      - title: Q3 OKR alignment across product and engineering
+        description: Coordinate quarterly OKR setting between product, engineering, and design. Ensure roadmap priorities reflect customer feedback and revenue targets.
+        issue_type: task
+        status: in_progress
+        priority: high
+        labels:
+          - okrs
+          - cross-functional
+
+      - title: Vendor contract renewal for cloud infrastructure
+        description: Annual GCP committed use discount contract expires in 45 days. Negotiate new terms based on projected growth and compare against AWS reserved instances.
+        issue_type: task
+        status: in_progress
+        priority: high
+        labels:
+          - vendor
+          - infrastructure
+
+      - title: Employee onboarding checklist for engineering hires
+        description: Standardize the onboarding process for new engineering hires. Include access provisioning, tooling setup, buddy assignment, and 30-60-90 day milestones.
+        issue_type: task
+        status: backlog
+        priority: medium
+        labels:
+          - onboarding
+          - hr
+
+      - title: Monthly all-hands meeting preparation
+        description: Compile department updates, customer wins, and product demos for the monthly all-hands. Coordinate with each team lead for their 5-minute segment.
+        issue_type: task
+        status: backlog
+        priority: low
+        labels:
+          - recurring
+          - communications
+
+      - title: SOC 2 Type II audit preparation
+        description: Gather evidence artifacts for the upcoming SOC 2 audit. Coordinate with engineering for access logs, security for policies, and HR for personnel controls.
+        issue_type: task
+        status: in_progress
+        priority: critical
+        labels:
+          - compliance
+          - security
+
+      - title: Migrate internal documentation to new knowledge base
+        description: Move all internal runbooks, process docs, and team handbooks from Google Docs to the new Notion workspace. Establish ownership and review cadence.
+        issue_type: task
+        status: backlog
+        priority: medium
+        labels:
+          - documentation
+          - tooling
